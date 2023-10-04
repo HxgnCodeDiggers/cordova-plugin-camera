@@ -8,7 +8,9 @@
     "platforms": [
       "android",
       "ios",
-      "browser"
+      "browser",
+      "windows",
+      "osx"
     ]
   },
   "repository": "github:apache/cordova-plugin-camera",
@@ -19,7 +21,9 @@
     "ecosystem:cordova",
     "cordova-android",
     "cordova-ios",
-    "cordova-browser"
+    "cordova-browser",
+    "cordova-windows",
+    "cordova-osx"
   ],
   "scripts": {
     "test": "npm run lint",
