@@ -196,7 +196,7 @@ function takePictureFromFileWP (successCallback, errorCallback, args) {
                 } else {
                     const storageFolder = getAppData().localFolder;
                     file.copyAsync(storageFolder, file.name, Windows.Storage.NameCollisionOption.replaceExisting).done(function (storageFile) {
-                        successCallback(URL.createObjectURL(storageFile));
+                        successCallback('ms-appdata:///local/' + storageFile.name);
                     }, function () {
                         errorCallback("Can't access localStorage folder.");
                     });
@@ -261,7 +261,7 @@ function takePictureFromFileWindows (successCallback, errorCallback, args) {
             } else {
                 const storageFolder = getAppData().localFolder;
                 file.copyAsync(storageFolder, file.name, Windows.Storage.NameCollisionOption.replaceExisting).done(function (storageFile) {
-                    successCallback(URL.createObjectURL(storageFile));
+                    successCallback('ms-appdata:///local/' + storageFile.name);
                 }, function () {
                     errorCallback("Can't access localStorage folder.");
                 });
